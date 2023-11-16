@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #a52a2a;
+    --secondary-text-colour: #deb887;
+    --hover-color: #ffe5a7;
+    --third-color: #a52aa5;
+}
+
+body{
+    font-family: "poppins", sans-serif;
+    color: var(--pimary-text-colour);
+}
+
+
+/* TEXT DESIGN */
+h1{
+    font-size: 3 rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2 rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.5 rem;
+}
+
+p{
+    font-family: "space grotesk", sans-serif;
+    font-size: 1.15 rem;
+    line-height: 1.8 rem;
+    font-weight: 300;
+}
+
+hr {
+    height: 4px;
+    background: black;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.small-bold-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.container{
+    max-width: 1500px;
+    margin-inline: auto;
+    padding-inline: 20px; 
+}
+
+.nav_bar {
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 70px !important;
+}
+
+.nav_links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_link {
+    list-style: none;
+    color: black;
+    font-weight: 450;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav_link:hover{
+    color: var(--third-color);
+    transition: 0.2s ease-out;
+    font-weight: 550;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul{
+    list-style: none;
+}
+
+.brand h3{
+    font-size: 1rem;
+    padding-top: 8px;
+    
+}
+
+.primary-button {
+    border: 1px solid black;
+    padding: 12px 24px;
+    border-radius: 6px;
+}
+
+.primary-button:hover{
+    background-color: var(--third-color);
+    transition: 0.7s ease-out; 
+    color: white !important;
+}
+
+.secondary-button {
+    border: 1px solid black;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 2px var(--secondary-text-colour);
+    transition: 0.2s ease-out;
+    color: whitesmoke; 
+}
+
+.secondary-button:hover{
+    background-color: black;
+    color: white !important;
+    transition: 0.7s ease-out; 
+}
+
+.third-button {
+    border: 1px solid black;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background-color: var(--third-color);
+    box-shadow: 0 0 2px var(--secondary-text-colour);
+    transition: 0.2s ease-out;
+    color: white; 
+}
+
+.third-button:hover{
+    background-color: black;
+    color: white !important;
+    transition: 0.7s ease-out; 
+}
+
+.menu {
+    font-size: 1.2vw;
+    font-weight: 500;
+    display: none;
+}
+
+
+
+
+/*nav-bar-logo*/
+
+.brand{
+    flex-direction: row;;
+}
+
+.logo-subtitle {
+    padding: 0px;
+    display: inline-block;
+    font-size: 0.75rem;
+}
+
+.logo-title {
+    display: block;
+    font-family: 'space grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.logo {
+   padding-right: 10px;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    justify-content: space-between;
+    height: calc((100% - 80px)/2);
+    /*background-color: #ff4f4f;*/
+    margin-top: 50px;
+}
+
+.hero-text h1{
+    padding-bottom: 0.75vw ;
+    font-size: 3vw;
+    font-weight: 500;
+    font-family: 'space grotesk', sans-serif;
+}
+.hero-text p{
+    padding-top: 0.75vw ;
+    padding-bottom: 1.5vw;
+    font-size: 1.2vw;
+}
+
+.hero-text button{
+    font-size: 1.5vw;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bus-tickets{
+    color: lightseagreen;
+}
+
+.hero-text{
+    padding: 2vw;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-img{
+    /*padding: 2vw;
+    object-position: center;*/
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img img{
+    width: 300px;
+    height: 300px
+}
+
+
+/* Add your existing styles here */
+
+/* Styles for the features section */
+.features-section {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.features-heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.feature {
+    width: calc(33.33% - 20px);
+    background-color: burlywood;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    background-color: brown;
+}
+
+.feature p:hover {
+    color: white;
+}
+
+.feature h3 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.feature p {
+    font-size: 14px;
+    color: black;
+}
+
+/* Adjust styles as needed */
+
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-group button:hover {
+    background-color: #2980b9;
+}
+
+/* Add your styles for the popup and overlay */
+.popup, .payment-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.popup-content, .payment-popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Additional styles for your form elements go here */
+
+/* Updated styles for radio buttons */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+#paymentAmount, #paymenthead {
+    padding: 5px;
+}
+
+/* Styles for the booked services section */
+.booked-services {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#bookedServicesTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#bookedServicesTable th, #bookedServicesTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    
+}
+
+
+
+#bookedServicesTable th {
+    background-color: brown;
+    color: white;
+}
+
+
+/* booked-services */
+
+.booked-services {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Add your existing styles here */
+
+/* Styles for the top heading bar */
+.booked-services h2 {
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Hover effect on table rows */
+#bookedServicesTable tbody tr:hover {
+    background-color: skyblue;
+}
+
+/* Styles for buttons */
+#bookedServicesTable tbody button {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+}
+
+/* Button hover effect */
+#bookedServicesTable tbody button:hover {
+    background-color: #27ae60;
+}
+
+/* Adjust styles as needed */

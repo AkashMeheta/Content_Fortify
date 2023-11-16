@@ -1,0 +1,98 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to render booked services table
+    function renderBookedServicesTable() {
+        const bookedServicesTable = document.getElementById('bookedServicesTable');
+        const tbody = bookedServicesTable.getElementsByTagName('tbody')[0];
+        tbody.innerHTML = '';
+
+        // Retrieve booked services data from localStorage
+        const bookedServicesData = JSON.parse(localStorage.getItem('formDataArray')) || [];
+
+        // Populate the table with booked services data
+        bookedServicesData.forEach((service, index) => {
+            const row = tbody.insertRow();
+            row.insertCell(0).textContent = service.service;
+            row.insertCell(1).textContent = service.creditCard;
+            row.insertCell(2).textContent = service.cardType;
+            row.insertCell(3).textContent = service.name;
+            row.insertCell(4).textContent = service.email;
+            row.insertCell(5).textContent = service.ipAddress;
+            row.insertCell(6).textContent = service.status || 'Inactive';
+
+            // Create buttons
+            const actionCell = row.insertCell(7);
+            const activateButton = document.createElement('button');
+            activateButton.textContent = 'Activate';
+            activateButton.addEventListener('click', function () {
+                // Change status to Active
+                bookedServicesData[index].status = 'Active';
+                localStorage.setItem('formDataArray', JSON.stringify(bookedServicesData));
+                renderBookedServicesTable(); // Update the table
+            });
+            actionCell.appendChild(activateButton);
+
+            const cancelCell = row.insertCell(8);
+            const cancelButton = document.createElement('button');
+            cancelButton.textContent = 'Cancel';
+            cancelButton.addEventListener('click', function () {
+                // Delete the booking
+                bookedServicesData.splice(index, 1);
+                localStorage.setItem('formDataArray', JSON.stringify(bookedServicesData));
+                renderBookedServicesTable(); // Update the table
+            });
+            cancelCell.appendChild(cancelButton);
+        });
+    }
+
+    // Render the booked services table on page load
+    renderBookedServicesTable();
+});
+
+/* fetures */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.features-container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.features-subheader {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature {
+    flex: 0 0 30%; /* Three features in a row, each taking 30% of the container */
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #555;
+    font-size: 14px;
+}
